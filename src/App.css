@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+table, td {
+    border: 1px solid #333;
+}
+
+thead, tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+.div {
+  margin: auto;
+  width: 50%;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  float: left;
+  width: 10%;
+}
+
+.right {
+  float: right;
+  width: 10%;
+}
+
+.middle {
+  border: 1px solid #C0C0C0;
+  width: 70%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

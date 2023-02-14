@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# Carousel challenge
+
+1. Desarrollar un componente de carrousel de componentes.
+
+O sea, un componente, que permita ir hacia adelante y hacia atrás recorriendo una lista de componentes hijos, que pueden ser , formularios, componente de imagen... comenten de lo que sea.
+
+Detalles a tener en cuenta:
+* Se deben hacer con componentes de clases.
+* Debe ser un proyecto de cero en react, y no se deben usar librerías externas.
+* En lo posible se solicita que se suba a un repositorio público
+
+> hint: step-1 (branch)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
