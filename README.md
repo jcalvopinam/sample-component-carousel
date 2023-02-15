@@ -11,6 +11,9 @@ Detalles a tener en cuenta:
 
 > hint: step-1 (branch)
 
+
+2. Migrar del componente de Clase a componente funcional.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

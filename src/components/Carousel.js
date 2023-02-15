@@ -1,51 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-class Carousel extends React.Component {
+const Carousel = (props) => {
 
-  state = {
-    currentIndex: 0
+  const {children} = props;
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = (currentIndex, children) => {
+    if (currentIndex === children.length - 1)
+      setCurrentIndex(0)
+    else
+      setCurrentIndex(currentIndex + 1);
   };
 
-  handleNext = () => {
-    const { children } = this.props;
-    this.setState((currentState) => ({
-      currentIndex: currentState.currentIndex === children.length - 1
-        ? 0
-        : currentState.currentIndex + 1
-    }));
+  const handlePrevious = (currentIndex, children) => {
+    if (currentIndex === 0)
+      setCurrentIndex(children.length - 1)
+    else
+      setCurrentIndex(currentIndex - 1);
   };
 
-  handlePreviuos = () => {
-    const { children } = this.props;
-    this.setState((currentState) => ({
-      currentIndex: currentState.currentIndex === 0
-        ? children.length - 1
-        : currentState.currentIndex - 1
-    }));
-  };
-
-  render() {
-    const { children } = this.props;
-    const { currentIndex } = this.state;
-
-    return (
-      <div class='row'>
-        <div class='column left'>
-          <button onClick={this.handlePreviuos}>Previuos</button>
+  return (
+      <div className='row'>
+        <div className='column left'>
+          <button onClick={() => handlePrevious(currentIndex, children)}>Previous</button>
         </div>
 
-        <div class='column middle'>
+        <div className='column middle'>
           {children[currentIndex]}
-          <br /> <br />
+          <br/> <br/>
           {currentIndex} - {children[currentIndex].props.name}
         </div>
 
-        <div class='column right'>
-          <button onClick={this.handleNext}>Next</button>
+        <div className='column right'>
+          <button onClick={() => handleNext(currentIndex, children)}>Next</button>
         </div>
       </div>
-    );
-  }
+  );
 }
 
 export default Carousel;
