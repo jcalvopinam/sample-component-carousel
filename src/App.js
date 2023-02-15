@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Carousel from './components/Carousel';
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -34,6 +35,13 @@ function App() {
 
             <textarea name='text area component' rows='5' cols='33' placeholder='Type in this area'/>
           </Carousel>
+
+          <br/>
+          <hr/>
+          <br/>
+
+          <h1 align='center'> Counter</h1>
+          <Counter/>
         </div>
       </div>
   );
